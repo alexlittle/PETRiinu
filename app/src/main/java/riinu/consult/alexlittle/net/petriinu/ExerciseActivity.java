@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -31,6 +32,9 @@ public class ExerciseActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
 
+        TextView questionTv = (TextView) findViewById(R.id.question);
+        questionTv.setText(ds.scheduleQuestion);
+
         tts = new TextToSpeech(ExerciseActivity.this, new TextToSpeech.OnInitListener() {
 
             @Override
@@ -43,7 +47,9 @@ public class ExerciseActivity extends AppCompatActivity {
                         Log.e("error", "This Language is not supported");
                     }
                     else{
-                        tts.speak(ds.scheduleQuestion, TextToSpeech.QUEUE_FLUSH, null);
+                        tts.speak(getResources().getString(R.string.app_name), TextToSpeech.QUEUE_ADD, null);
+
+                        tts.speak(ds.scheduleQuestion, TextToSpeech.QUEUE_ADD, null);
                     }
                 }
                 else
