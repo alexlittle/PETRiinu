@@ -7,6 +7,53 @@
     android:layout_height="match_parent"
     tools:context="riinu.consult.alexlittle.net.petriinu.MedicationActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:src="@mipmap/medication"/>
+
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        />
+
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/yes_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical|center"
+        android:text="Yes"
+        android:textColor="@color/colorAccent"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        />
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/no_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical|center"
+            android:text="No"
+            android:textColor="@color/colorAccent"
+            android:textSize="45sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

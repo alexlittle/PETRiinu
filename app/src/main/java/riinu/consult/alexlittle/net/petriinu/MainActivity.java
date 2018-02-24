@@ -98,7 +98,14 @@ public class MainActivity extends AppCompatActivity {
 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 DailySchedule selectedSchedule = dailyScheduleList.get(position);
-                Intent i = new Intent(MainActivity.this, MedicationActivity.class);
+                Intent i;
+                if (position == 0 || position == 2 || position ==4) {
+                    i = new Intent(MainActivity.this, MedicationActivity.class);
+                } else if (position == 1 || position == 3 || position ==5) {
+                    i = new Intent(MainActivity.this, MealActivity.class);
+                } else {
+                    i = new Intent(MainActivity.this, ExerciseActivity.class);
+                }
                 Bundle tb = new Bundle();
                 tb.putSerializable(DailySchedule.TAG, selectedSchedule);
                 i.putExtras(tb);
