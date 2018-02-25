@@ -22,8 +22,13 @@ import org.joda.time.DateTime;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    public final static Locale locale = Locale.UK;
+    public final static int delay = 2000;
 
     private TextView mTextMessage;
     private TextView mAskQuestion;
@@ -118,7 +123,8 @@ public class MainActivity extends AppCompatActivity {
         DailySchedule ds1 = new DailySchedule();
         ds1.scheduleTitle = "Morning medication";
         ds1.scheduleDateTime = new DateTime(2018,02,25,8, 30  );
-        ds1.scheduleQuestion = "Did you remember to take your XXXX medication this morning?";
+        ds1.scheduleQuestion = "Did you remember to take your donepezil medication this morning?";
+        ds1.scheduleImage = R.mipmap.donepezil;
         dailyScheduleList.add(ds1);
 
         DailySchedule ds2 = new DailySchedule();
@@ -130,7 +136,8 @@ public class MainActivity extends AppCompatActivity {
         DailySchedule ds3 = new DailySchedule();
         ds3.scheduleTitle = "Lunchtime medication";
         ds3.scheduleDateTime = new DateTime(2018,02,25,13, 00  );
-        ds3.scheduleQuestion = "Did you remember to take your XXXX medication this lunchtime?";
+        ds3.scheduleQuestion = "Did you remember to take your blood pressure medication this lunchtime?";
+        ds3.scheduleImage = R.mipmap.blood_pressue;
         dailyScheduleList.add(ds3);
 
         DailySchedule ds4 = new DailySchedule();
@@ -142,7 +149,8 @@ public class MainActivity extends AppCompatActivity {
         DailySchedule ds5 = new DailySchedule();
         ds5.scheduleTitle = "Evening medication";
         ds5.scheduleDateTime = new DateTime(2018,02,25,18, 00  );
-        ds5.scheduleQuestion = "Did you remember to take your XXXX medication this evening?";
+        ds5.scheduleQuestion = "Did you remember to take your memory medication this evening?";
+        ds5.scheduleImage = R.mipmap.memory;
         dailyScheduleList.add(ds5);
 
         DailySchedule ds6 = new DailySchedule();

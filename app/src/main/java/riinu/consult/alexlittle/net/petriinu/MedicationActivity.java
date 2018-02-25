@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,12 +46,13 @@ public class MedicationActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
 
-        TextView questionTv = (TextView) findViewById(R.id.question);
+        ImageView iv = (ImageView) findViewById(R.id.med_image);
+        iv.setImageResource(ds.scheduleImage);
 
+        TextView questionTv = (TextView) findViewById(R.id.question);
         questionTv.setText(ds.scheduleQuestion);
 
         Button btnYes = (Button) findViewById(R.id.yes_button);
-
         btnYes.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -61,7 +63,7 @@ public class MedicationActivity extends AppCompatActivity {
                     public void onInit(int status) {
                         // TODO Auto-generated method stub
                         if(status == TextToSpeech.SUCCESS){
-                            int result=tts.setLanguage(Locale.UK);
+                            int result=tts.setLanguage(MainActivity.locale);
                             if(result==TextToSpeech.LANG_MISSING_DATA ||
                                     result==TextToSpeech.LANG_NOT_SUPPORTED){
                                 Log.e("error", "This Language is not supported");
@@ -73,7 +75,7 @@ public class MedicationActivity extends AppCompatActivity {
 
 
                                 try {
-                                    Thread.sleep(3000);
+                                    Thread.sleep(MainActivity.delay);
                                 } catch (InterruptedException ie){
 
                                 }
@@ -101,7 +103,7 @@ public class MedicationActivity extends AppCompatActivity {
                     public void onInit(int status) {
                         // TODO Auto-generated method stub
                         if(status == TextToSpeech.SUCCESS){
-                            int result=tts.setLanguage(Locale.UK);
+                            int result=tts.setLanguage(MainActivity.locale);
                             if(result==TextToSpeech.LANG_MISSING_DATA ||
                                     result==TextToSpeech.LANG_NOT_SUPPORTED){
                                 Log.e("error", "This Language is not supported");
@@ -113,7 +115,7 @@ public class MedicationActivity extends AppCompatActivity {
 
 
                                 try {
-                                    Thread.sleep(3000);
+                                    Thread.sleep(MainActivity.delay);
                                 } catch (InterruptedException ie){
 
                                 }
@@ -139,7 +141,7 @@ public class MedicationActivity extends AppCompatActivity {
             public void onInit(int status) {
                 // TODO Auto-generated method stub
                 if(status == TextToSpeech.SUCCESS){
-                    int result=tts.setLanguage(Locale.UK);
+                    int result=tts.setLanguage(MainActivity.locale);
                     if(result==TextToSpeech.LANG_MISSING_DATA ||
                             result==TextToSpeech.LANG_NOT_SUPPORTED){
                         Log.e("error", "This Language is not supported");

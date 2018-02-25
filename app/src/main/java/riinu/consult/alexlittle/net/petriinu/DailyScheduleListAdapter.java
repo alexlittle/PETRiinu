@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
 import java.util.ArrayList;
 
 /**
@@ -38,7 +41,9 @@ public class DailyScheduleListAdapter extends ArrayAdapter<DailySchedule> {
         View rowView = inflater.inflate(R.layout.daily_schedule_row, parent, false);
         DailySchedule s = dailyScheduleList.get(position);
         TextView titleView = (TextView) rowView.findViewById(R.id.schedule_title);
-        titleView.setText(s.scheduleTitle);
+        DateTimeFormatter fmt = DateTimeFormat.forPattern("HH:mm");
+        String str = fmt.print(s.scheduleDateTime);
+        titleView.setText(str + " - " + s.scheduleTitle);
         rowView.setTag(s);
         return rowView;
     }
