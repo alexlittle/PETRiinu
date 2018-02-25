@@ -33,6 +33,11 @@
             android:name=".ExerciseActivity"
             android:label="Mikko - Exercise/Activity">
         </activity>
+
+        <activity
+            android:name=".PhotoActivity"
+            android:label="Mikko - Photos">
+        </activity>
     </application>
 
 </manifest>

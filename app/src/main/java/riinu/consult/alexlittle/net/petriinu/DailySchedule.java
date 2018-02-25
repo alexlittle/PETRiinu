@@ -18,3 +18,5 @@ public class DailySchedule implements Serializable {
     public String scheduleTitle = "";
     public int scheduleImage = 0;
 }
+
+

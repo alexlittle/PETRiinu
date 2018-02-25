@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public final static Locale locale = Locale.UK;
-    public final static int delay = 2000;
+    public final static int delay = 1000;
 
     private TextView mTextMessage;
     private TextView mAskQuestion;
@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
                     mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
+                    Intent i = new Intent(MainActivity.this, PhotoActivity.class);
+                    startActivity(i);
                 case R.id.navigation_notifications:
                     mTextMessage.setText(R.string.title_notifications);
                     return true;

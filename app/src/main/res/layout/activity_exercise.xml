@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     tools:context="riinu.consult.alexlittle.net.petriinu.ExerciseActivity">
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,44 +27,49 @@
             />
 
         <Button
-            android:id="@+id/snackbutton"
+            android:id="@+id/walkingbutton"
+            android:paddingLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@mipmap/snack"
+            android:drawableLeft="@mipmap/walk"
             android:background="#ffffff"
             android:gravity="center_vertical|center"
-            android:text="Snack"
+            android:text="Walking"
             android:textColor="@color/colorAccent"
             android:textSize="25sp"
             android:textStyle="bold"/>
 
         <Button
-            android:id="@+id/sandwichbutton"
+            android:id="@+id/fishingbutton"
+            android:paddingLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@mipmap/sandwich"
+            android:drawableLeft="@mipmap/fishing"
             android:background="#ffffff"
             android:gravity="center_vertical|center"
-            android:text="Sandwich"
+            android:text="Fishing"
             android:textColor="@color/colorAccent"
             android:textSize="25sp"
             android:textStyle="bold"/>
+
 
         <Button
-            android:id="@+id/hotmealbutton"
+            android:id="@+id/shoppingbutton"
+            android:paddingLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@mipmap/hot_meal"
+            android:drawableLeft="@mipmap/shopping"
             android:background="#ffffff"
             android:gravity="center_vertical|center"
-            android:text="Hot meal"
+            android:text="Shopping"
             android:textColor="@color/colorAccent"
             android:textSize="25sp"
             android:textStyle="bold"/>
-
     </LinearLayout>
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

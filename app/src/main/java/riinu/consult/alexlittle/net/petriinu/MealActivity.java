@@ -50,7 +50,7 @@ public class MealActivity extends AppCompatActivity {
                     public void onInit(int status) {
                         // TODO Auto-generated method stub
                         if(status == TextToSpeech.SUCCESS){
-                            int result=tts.setLanguage(Locale.UK);
+                            int result=tts.setLanguage(MainActivity.locale);
                             if(result==TextToSpeech.LANG_MISSING_DATA ||
                                     result==TextToSpeech.LANG_NOT_SUPPORTED){
                                 Log.e("error", "This Language is not supported");
@@ -62,7 +62,7 @@ public class MealActivity extends AppCompatActivity {
 
 
                                 try {
-                                    Thread.sleep(3000);
+                                    Thread.sleep(MainActivity.delay);
                                 } catch (InterruptedException ie){
 
                                 }
@@ -93,7 +93,7 @@ public class MealActivity extends AppCompatActivity {
                     public void onInit(int status) {
                         // TODO Auto-generated method stub
                         if(status == TextToSpeech.SUCCESS){
-                            int result=tts.setLanguage(Locale.UK);
+                            int result=tts.setLanguage(MainActivity.locale);
                             if(result==TextToSpeech.LANG_MISSING_DATA ||
                                     result==TextToSpeech.LANG_NOT_SUPPORTED){
                                 Log.e("error", "This Language is not supported");
@@ -105,7 +105,7 @@ public class MealActivity extends AppCompatActivity {
 
 
                                 try {
-                                    Thread.sleep(3000);
+                                    Thread.sleep(MainActivity.delay);
                                 } catch (InterruptedException ie){
 
                                 }
@@ -136,7 +136,7 @@ public class MealActivity extends AppCompatActivity {
                     public void onInit(int status) {
                         // TODO Auto-generated method stub
                         if(status == TextToSpeech.SUCCESS){
-                            int result=tts.setLanguage(Locale.UK);
+                            int result=tts.setLanguage(MainActivity.locale);
                             if(result==TextToSpeech.LANG_MISSING_DATA ||
                                     result==TextToSpeech.LANG_NOT_SUPPORTED){
                                 Log.e("error", "This Language is not supported");
@@ -148,7 +148,7 @@ public class MealActivity extends AppCompatActivity {
 
 
                                 try {
-                                    Thread.sleep(3000);
+                                    Thread.sleep(MainActivity.delay);
                                 } catch (InterruptedException ie){
 
                                 }
@@ -172,7 +172,7 @@ public class MealActivity extends AppCompatActivity {
             public void onInit(int status) {
                 // TODO Auto-generated method stub
                 if(status == TextToSpeech.SUCCESS){
-                    int result=tts.setLanguage(Locale.UK);
+                    int result=tts.setLanguage(MainActivity.locale);
                     if(result==TextToSpeech.LANG_MISSING_DATA ||
                             result==TextToSpeech.LANG_NOT_SUPPORTED){
                         Log.e("error", "This Language is not supported");
