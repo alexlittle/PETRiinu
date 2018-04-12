@@ -46,15 +46,15 @@ public class PhotoActivity  extends AppCompatActivity {
         photoList.add(p2);
 
         Photo p3 = new Photo();
-        p3.photoTitle = "Son - Jarko";
+        p3.photoTitle = "Son - Jarkko";
         p3.photoImage = R.mipmap.son;
-        p3.photoVoice = "This is your son Jarko, he lives in Helsinki and will come to visit you at the weekend";
+        p3.photoVoice = "This is your son Jarkko, he lives in Helsinki and will come to visit you at the weekend";
         photoList.add(p3);
 
         Photo p4 = new Photo();
-        p4.photoTitle = "Daughter - Karla";
+        p4.photoTitle = "Daughter - Kati";
         p4.photoImage = R.mipmap.daughter;
-        p4.photoVoice = "This is your daughter Karla, she lives in Espoo with her husband and your two grandchildren";
+        p4.photoVoice = "This is your daughter Kati, she lives in Espoo with her husband and your two grandchildren";
         photoList.add(p4);
 
     }
